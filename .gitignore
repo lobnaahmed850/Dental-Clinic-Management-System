@@ -1,0 +1,20 @@
+# Compiled files
+*.class
+
+# Maven
+/target/
+
+# NetBeans
+/nbproject/private/
+/build/
+/dist/
+
+# IntelliJ
+/.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

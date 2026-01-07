@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="720" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject3.ManagePatientsController">
+
+    <TableView fx:id="patientsTable" layoutX="10" layoutY="10" prefHeight="380" prefWidth="700">
+
+        <columns>
+            <TableColumn fx:id="firstNameCol" prefWidth="100" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="100" text="Last Name" />
+            <TableColumn fx:id="emailCol" prefWidth="150" text="Email" />
+            <TableColumn fx:id="idCol" prefWidth="98.0" text="ID" />
+            <TableColumn fx:id="historyCol" prefWidth="152.0" text="Medical History" />
+            <TableColumn fx:id="ageCol" prefWidth="50" text="Age" />
+            <TableColumn fx:id="genderCol" prefWidth="50" text="Gender" />
+        </columns>
+
+    </TableView>
+
+    <Button fx:id="addBtn" layoutX="10" layoutY="400" onAction="#handleAdd" text="Add" />
+
+    <Button fx:id="deleteBtn" layoutX="80" layoutY="400" onAction="#handleDelete" text="Delete" />
+
+</AnchorPane>

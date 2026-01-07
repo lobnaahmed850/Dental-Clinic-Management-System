@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="700" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject3.ManageAppointmentsController">
+
+    <TableView fx:id="appointmentsTable" layoutX="0" layoutY="0" prefHeight="380" prefWidth="700">
+        <columns>
+            <TableColumn fx:id="idCol" prefWidth="100" text="Appointment ID" />
+            <TableColumn fx:id="patientCol" prefWidth="120" text="Patient Name" />
+            <TableColumn fx:id="doctorCol" prefWidth="120" text="Doctor Name" />
+            <TableColumn fx:id="dateCol" prefWidth="120" text="Date" />
+            <TableColumn fx:id="timeCol" prefWidth="100" text="Time" />
+            <TableColumn fx:id="statusCol" prefWidth="120" text="Status" />
+        </columns>
+    </TableView>
+
+    <Button layoutX="5" layoutY="385" onAction="#handleAdd" prefWidth="70" text="Add" />
+    <Button layoutX="80" layoutY="385" onAction="#handleCancelAppointment" prefWidth="130" text="Cancel Appointment" />
+    <Button layoutX="220" layoutY="385" onAction="#handleReschedule" prefWidth="100" text="Reschedule" />
+   <Button layoutX="330" layoutY="385" onAction="#handleAddPrescription" prefWidth="120" text="Add Prescription" />
+<Button layoutX="470"
+        layoutY="385"
+        onAction="#handleSortAppointments"
+        prefWidth="100"
+        text="Sort" />
+
+
+</AnchorPane>

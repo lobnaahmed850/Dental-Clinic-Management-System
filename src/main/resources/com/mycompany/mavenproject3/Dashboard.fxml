@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="450" prefWidth="500" spacing="10" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject3.DashboardController">
+
+    <!-- Menu Bar -->
+    <MenuBar>
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="New" />
+                    <MenuItem text="Open" />
+                    <MenuItem text="Save" />
+                    <MenuItem onAction="#handleExit" text="Exit" />
+                </items>
+            </Menu>
+            <Menu text="Edit">
+                <items>
+                    <MenuItem text="Undo" />
+                    <MenuItem text="Redo" />
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem onAction="#handleAbout" text="About" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <!-- Title Label -->
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Dental Clinic Management System" />
+
+    <!-- Separator -->
+    <Separator prefWidth="480" />
+
+    <!-- GridPane for dashboard buttons -->
+    <GridPane alignment="CENTER" hgap="10" vgap="10">
+        <!-- Row 0 -->
+        <Button fx:id="manageDoctorsBtn" onAction="#handleManageDoctors" prefWidth="150" text="Manage Doctors" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="managePatientsBtn" onAction="#handleManagePatients" prefWidth="150" text="Manage Patients" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Row 1 -->
+        <Button fx:id="addDoctorBtn" onAction="#handleAddDoctor" prefWidth="150" text="Add Doctor" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+        <!-- Row 2 -->
+        <Button fx:id="addAppointmentBtn" onAction="#handleAddAppointment" prefWidth="150" text="Add Appointment" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button fx:id="manageAppointmentsBtn" onAction="#handleManageAppointments" prefWidth="150" text="Manage Appointments" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Row 3 -->
+        <Button fx:id="addPaymentBtn" onAction="#handleAddPayment" prefWidth="150" text="Add Payment" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Button fx:id="managePaymentsBtn" onAction="#handleManagePayments" prefWidth="150" text="Manage Payments" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="addPatientBtn" onAction="#handleAddPatient" prefWidth="150" text="Add Patient" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+</VBox>
